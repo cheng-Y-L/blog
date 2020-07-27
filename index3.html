@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>分类</title>
+  <link rel="stylesheet" href="font/iconfont.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div style="height:50vh">
+  <div class="page-header">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#">Hexo Theme Fluid</a>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html"><i class="iconfont icon-shouye"></i>首页</a></li>
+          <li><a href="index2.html"><i class="iconfont icon-guidang"></i>归档</a></li>
+          <li><a href="index3.html"><i class="iconfont icon-leimupinleifenleileibie"></i>分类</a></li>
+          <li><a href="index4.html"><i class="iconfont icon-biaoqian"></i>标签</a></li>
+          <li><a href="index5.html"><i class="iconfont icon-guanyu"></i>关于</a></li>
+          <li><a href="index6.html"><i class="iconfont icon-jiahao"></i>友链</a></li>
+          <li><a href="#"><i class="iconfont icon-wendangdocument79"></i>文档</a></li>
+          <li><a href="#"><i class="iconfont icon-sousu"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="banner-3">
+    <div class="mask-3"></div>
+    <div class="text-3">
+      分类
+    </div>
+
+  </div>
+</div>
+
+<div class="main">
+  <div class="containers">
+    <!--分类项-->
+    <!--<div class="category-item" id="show">-->
+      <!--&lt;!&ndash;分类标题+箭头&ndash;&gt;-->
+      <!--<div class="cate-label">-->
+        <!--<span class="cate-title">-->
+          <!--功能增强-->
+        <!--<a href="javascript:showBtn();"-->
+           <!--class="arrow">-->
+          <!--&gt;-->
+        <!--</a>-->
+        <!--</span>-->
+        <!--<div class="cate-count">6</div>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;文章列表&ndash;&gt;-->
+      <!--<ul class="article-list" id="hidden">-->
+        <!--<li><a href="#">使用 ECharts 插件绘制炫酷图表</a></li>-->
+        <!--<li><a href="#">给博客文章嵌入 PPT 演示</a></li>-->
+        <!--<li><a href="#">在 Fluid 主题首页上加入一言</a></li>-->
+        <!--<li><a href="#">使用 Rainbow 展示随机的英语句子</a></li>-->
+        <!--<li><a href="#">Hexo 暗黑模式</a></li>-->
+        <!--<li><a href="#">给 Hexo 博客添加 PWA 支持</a></li>-->
+      <!--</ul>-->
+
+    <!--</div>-->
+    <!--分类项-->
+    <div class="category-item">
+      <div class="cate-label">
+        <span class="cate-title">
+          功能增强
+        <a class="arrow">
+          &gt;
+        </a>
+        </span>
+        <div class="cate-count">6</div>
+      </div>
+      <ul class="article-list">
+        <li><a href="#">使用 ECharts 插件绘制炫酷图表</a></li>
+        <li><a href="#">给博客文章嵌入 PPT 演示</a></li>
+        <li><a href="#">在 Fluid 主题首页上加入一言</a></li>
+        <li><a href="#">使用 Rainbow 展示随机的英语句子</a></li>
+        <li><a href="#">Hexo 暗黑模式</a></li>
+        <li><a href="#">给 Hexo 博客添加 PWA 支持</a></li>
+      </ul>
+
+    </div>
+
+    <div class="category-item">
+    <div class="cate-label">
+        <span class="cate-title">
+          实用技巧
+        <a class="arrow">
+          &gt;
+        </a>
+        </span>
+      <div class="cate-count">3</div>
+    </div>
+    <ul class="article-list">
+    <li><a href="#">Hexo 云服务备份与使用Jupyter</a></li>
+    <li><a href="#">常见静态网站托管平台使用及多节点部署方案</a></li>
+    <li><a href="#">利用 GitHub Actions 自动部署 Hexo 博客</a></li>
+    </ul>
+    </div>
+    <div class="category-item">
+    <div class="cate-label">
+        <span class="cate-title">
+          主题示例
+        <a class="arrow">
+          &gt;
+        </a>
+        </span>
+      <div class="cate-count">2</div>
+    </div>
+    <ul class="article-list">
+    <li><a href="#">搭配Fluid如何优雅的写一篇文章</a></li>
+    <li><a href="#">Hello Fluid</a></li>
+    </ul>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="page-footer">
+    <div>Hexo<i></i>Fluid</div>
+    <div>总访问量</div>
+  </div>
+</footer>
+<!--C的指针-->
+<script>
+  b=document.getElementsByClassName("cate-title")
+  //  console.log(b)
+  a=document.getElementsByClassName("article-list")
+  //  console.log(a[0])
+  for(var i=0;i<b.length;i++ ) {
+    var c = b[i];
+//    var x = i
+//匿名函数  因为闭包的原因，会使得在方法内的代码不能执行
+    (function(x) {
+      var listener = function () {
+        if (a[x].style.display === "block") {
+          a[x].style.display = "none";
+        }else {
+          a[x].style.display = "block";
+        }
+        console.log('b', x, i)
+      }
+      c.addEventListener("click", listener)
+    })(i)
+
+  }
+
+//  b[0].addEventListener("click", function () {
+//    if (a[0].style.display === "none") {
+//      a[0].style.display = "block";
+//    }
+//    else {
+//      a[0].style.display = "none";
+//    }
+//  })
+//
+//  b[1].addEventListener("click", function () {
+//    if (a[1].style.display === "none") {
+//      a[1].style.display = "block";
+//    }
+//    else {
+//      a[1].style.display = "none";
+//    }
+//  })
+//
+//  b[2].addEventListener("click", function () {
+//    if (a[2].style.display === "none") {
+//      a[2].style.display = "block";
+//    }
+//    else {
+//      a[2].style.display = "none";
+//    }
+//  })
+
+  // 1.实现一个item:可以展开折叠
+
+  //   2.全部展开折叠
+
+//  3.手风琴效果：每次只展示一个
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/*html的rem默认值是16px，可以通过font-size来实现改变*/
+ul li {
+    list-style: none;
+}
+
+/*一般html都会自带一些内边框和外边框*/
+html, body,
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+/*清除超链接的样式*/
+a {
+    text-decoration: none;
+}
+
+/*清除浮动的方式有三种:1、clear：both 但需要在同级新建一个div,会使得结构混乱；2、overflow：hidden 在父级增加一个元素名
+，但可能会导致元素超出部分被影藏；3、伪类元素，综合了前两者的优缺点*/
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+/*页面通用样式----end*/
+
+/* 页面头部导航样式---start*/
+.page-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    /*层次是按照先后顺序出现的，想要不被覆盖，可以提高层数*/
+}
+
+/*在没有浮动前他是一个块级元素，可以通过display：inline-block；实现转变为内联-块级元素*/
+.logo {
+    /*float:left;*/
+    color: white;
+    display: inline-block;
+}
+
+/*a标签一般会自带颜色，修改时需要找到对应的a标签*/
+.logo a {
+    font-size: 24px;
+    color: white;
+}
+
+/*对于留空白的元素，可以使用margin来撑出空间*/
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container a {
+    color: white;
+}
+
+.navbar {
+    /*float: right;*/
+    /*display: flex;*/
+}
+
+.navbar li {
+    margin-right: 10px;
+}
+
+/* 页面头部导航样式---end*/
+
+body {
+    background-color: #eee;
+}
+
+/*banner样式*/
+
+/*.banner {*/
+    /*height: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*cursor: default;*/
+    /*overflow-wrap: break-word;*/
+    /*background-image: url("../image/background.webp");*/
+    /*background-position: center center;*/
+/*}*/
+.banner-2 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/21.webp");
+    background-position: center center;
+}
+/*.banner-3 {*/
+    /*height: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*cursor: default;*/
+    /*overflow-wrap: break-word;*/
+    /*background-image: url("../image/31.webp");*/
+    /*background-position: center center;*/
+/*}*/
+/*.banner-4 {*/
+    /*height: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*cursor: default;*/
+    /*overflow-wrap: break-word;*/
+    /*background-image: url("../image/41.webp");*/
+    /*background-position: center center;*/
+/*}*/
+/*.banner-5 {*/
+    /*height: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*cursor: default;*/
+    /*overflow-wrap: break-word;*/
+    /*background-image: url("../image/51.webp");*/
+    /*background-position: center center;*/
+/*}*/
+/*.banner-6 {*/
+    /*height: 100%;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*cursor: default;*/
+    /*overflow-wrap: break-word;*/
+    /*background-image: url("../image/61.webp");*/
+    /*background-position: center center;*/
+/*}*/
+.banner .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+/*旋转90度 ratate*/
+.banner .arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
+    font-size: 2rem;
+}
+
+/*背景图片和背景颜色不能在同一个div中实现*/
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    height: 2137px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.length {
+    color: darkgray;
+    width: 80%;
+    margin: -40px auto;
+}
+
+.containers {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 2137px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(0, -50px);
+    padding: 40px;
+    border-radius:15px;
+}
+
+.article-item {
+    /*background-color: #ff7a4d;*/
+    display: flex;
+    margin-bottom: 50px;
+
+}
+
+.article-item__img {
+    border-color: #ff7a4d;
+    /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);*/
+    width: 268px;
+    height: 160px;
+
+}
+
+.article-item__img img {
+    height: 100%;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.article-item__text {
+    padding: 0 40px;
+}
+
+.article-item__text a {
+    color: #333;
+}
+
+.article-item__text .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+.article-item__text .desc:hover a,
+.article-item__text .title:hover a{
+    color:#e90;
+}
+
+.article-item__text .desc {
+    font-size: 16px;
+    margin: 20px 0;
+    overflow: hidden;
+    line-height: 1.4rem;
+    /*计算样式，三排的高度*/
+    max-height: calc(1.4rem * 3);
+}
+
+.desc a {
+    /*显示3行*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.article-item__tag {
+    display: flex;
+}
+
+.article-item__tag li {
+    margin-right: 10px;
+}
+
+.page-footer{
+    /*文字居中*/
+    text-align:center;
+    margin:10px 0;

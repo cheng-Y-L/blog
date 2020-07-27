@@ -1,0 +1,599 @@
+/*html的rem默认值是16px，可以通过font-size来实现改变*/
+ul li {
+    list-style: none;
+}
+
+/*一般html都会自带一些内边框和外边框*/
+html, body,
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+/*清除超链接的样式*/
+a {
+    text-decoration: none;
+}
+
+/*清除浮动的方式有三种:1、clear：both 但需要在同级新建一个div,会使得结构混乱；2、overflow：hidden 在父级增加一个元素名
+，但可能会导致元素超出部分被影藏；3、伪类元素，综合了前两者的优缺点*/
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+/*页面通用样式----end*/
+
+/* 页面头部导航样式---start*/
+.page-header.is-show{
+    background-color:darkgray;
+}
+.page-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    /*层次是按照先后顺序出现的，想要不被覆盖，可以提高层数*/
+}
+
+/*在没有浮动前他是一个块级元素，可以通过display：inline-block；实现转变为内联-块级元素*/
+.logo {
+    /*float:left;*/
+    color: white;
+    display: inline-block;
+}
+
+/*a标签一般会自带颜色，修改时需要找到对应的a标签*/
+.logo a {
+    font-size: 24px;
+    color: white;
+}
+
+/*对于留空白的元素，可以使用margin来撑出空间*/
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container a {
+    color: white;
+}
+
+.navbar {
+    /*float: right;*/
+    /*display: flex;*/
+}
+
+.navbar li {
+    margin-right: 10px;
+}
+
+/* 页面头部导航样式---end*/
+
+body {
+    background-color: #eee;
+}
+
+/*banner样式*/
+
+.banner {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/background.webp");
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.banner-2 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/21.webp");
+    background-position: center center;
+}
+
+.banner-3 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/31.webp");
+    background-position: center center;
+}
+
+.banner-4 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/41.webp");
+    background-position: center center;
+}
+
+.banner-5 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/51.webp");
+    background-position: center center;
+}
+
+.banner-6 {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    overflow-wrap: break-word;
+    background-image: url("../image/61.webp");
+    background-position: center center;
+}
+
+.banner .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.banner-2 .text-2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.banner-3 .text-3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.banner-4 .text-4 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.banner-5 .text-5 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.banner-6 .text-6 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+}
+
+/*旋转90度 ratate*/
+.banner .arrow {
+    position: relative;
+    bottom: 150px;
+    color: white;
+    left: 50%;
+    /*transform: translate(-50%, 0) rotate(90deg);*/
+    font-size: 2rem;
+
+    display: block;
+    animation-name: myfirst;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari and Chrome: */
+    -webkit-animation-name: myfirst;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+
+}
+
+@keyframes myfirst {
+    0% {
+        bottom:: 0px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom:;: 0 px;
+    }
+}
+
+.banner .arrow .icon-more {
+    font-size: 30px;
+
+}
+
+/*背景图片和背景颜色不能在同一个div中实现*/
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask-2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask-3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask-4 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask-5 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask-6 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.length {
+    color: darkgray;
+    width: 80%;
+    margin: -40px auto;
+}
+
+.containers {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 100%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transform: translate(0, -100px);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.article-item {
+    /*background-color: #ff7a4d;*/
+    display: flex;
+    margin-bottom: 50px;
+
+}
+
+.article-item__img {
+    border-color: #ff7a4d;
+    /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);*/
+    width: 268px;
+    height: 160px;
+
+}
+
+.article-item__img img {
+    height: 100%;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.article-item__text {
+    padding: 0 40px;
+}
+
+.article-item__text a {
+    color: #333;
+}
+
+.article-item__text .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.article-item__text .desc:hover a,
+.article-item__text .title:hover a {
+    color: #e90;
+}
+
+.article-item__text .desc {
+    font-size: 16px;
+    margin: 20px 0;
+    overflow: hidden;
+    line-height: 1.4rem;
+    /*计算样式，三排的高度*/
+    max-height: calc(1.4rem * 3);
+}
+
+.desc a {
+    /*显示3行*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.article-item__tag {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-item__tag li {
+    margin-right: 10px;
+}
+
+.page-footer {
+    /*文字居中*/
+    text-align: center;
+    margin: 10px 0;
+}
+
+/*归档*/
+.article-item__text21 {
+    width: 100%;
+}
+
+.title21 {
+    font-weight: normal;
+    width: 100%;
+}
+
+.item_text21 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.desc21-text21 span {
+    text-decoration: none;
+    color: rgb(73, 80, 87);
+}
+
+.item_text22 {
+    font-size: 1.5rem;
+
+}
+
+.desc21-text21 li {
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.desc21-text21 a {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*分类*/
+
+.category-item .cate-title {
+    font-size: 20px;
+    font-weight: bold;
+    flex: auto;
+    padding: 10px 5px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.category-item .cate-title:hover {
+    background-color: #eee;
+}
+
+.category-item a {
+    color: black;
+    font-size: 1rem;
+}
+
+.category-item li {
+    margin: 20px auto;
+    padding: 0 40px;
+}
+
+.cate-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.arrow {*/
+/*transition: all 0.3s ease;*/
+/*!*旋转平移，margin,padding对行内元素不会生效*!*/
+/*display: inline-block;*/
+/*}*/
+
+/*.is-opened .arrow {*/
+/*transform: rotate(90deg);*/
+/*}*/
+
+/*.is-opened + .article-list {*/
+/*display: block;*/
+/*}*/
+
+.article-list {
+    display: none;
+}
+
+/*标签*/
+
+/*关于*/
+
+/*友链*/
+
+/*媒体查询，参考部分Bootstrap 框架*/
+/*当页面大于1200px 时，大屏幕，主要是PC 端*/
+@media (min-width: 992px) {
+    .nav-mobile-btn {
+        display: none;
+    }
+
+}
+
+/*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar {
+        display: none;
+    }
+
+}
+
+/*在小于480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 767px) {
+    .nav-container{
+        display:block;
+        position:relative;
+    }
+    .navbar {
+        display: none;
+    }
+
+    .article-item {
+        display: block;
+    }
+
+    .containers {
+        width: 100%;
+        padding: 30px 27px;
+    }
+
+    .article-item__img {
+        width: 100%;
+    }
+
+    .article-item__img img {
+        width: 100%;
+    }
+
+    .article-item__text {
+        padding: 20px 15px 8px;
+    }
+
+    .article-item__text .title {
+        font-size: 20px;
+    }
+
+    .nav-mobile-btn div {
+        width: 30px;
+        /*line-height:100%;*/
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-mobile-btn {
+        position:absolute;
+        right:20px;
+        top:20px;
+
+
+        background: transparent;
+        outline: none;
+        border: none;
+        width: 30px;
+        padding: 0;
+        height: 20px;
+    }
+
+    .nav-mobile-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.25s ease-in-out;
+    }
+
+    .nav-mobile-btn span:nth-child(2) {
+        top: 10px;
+    }
+
+    .nav-mobile-btn span:nth-child(3) {
+        top: 20px;
+    }
+
+    .open span:nth-child(1) {
+        top: 11px;
+        transform: rotate(135deg);
+
+    }
+
+    .open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+
+    .open span:nth-child(3) {
+        top: 11px;
+        transform: rotate(-135deg);
+
+    }
+
+    .show {
+        display: block !important;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar li{
+        text-align: center;
+    }
+
+}
